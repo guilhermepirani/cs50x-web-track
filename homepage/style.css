@@ -1,0 +1,49 @@
+
+#page {
+  background: linear-gradient(0deg, #000000 0%, #2F4F4F 100%);
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
+  text-align: center;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.container-fluid header {
+  background: black;
+  min-width: 100vh;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.top-nav h2 {
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 30px;
+}
+
+.top-nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 2vh 3vh 2vh 3vh;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.top-nav a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #2F4F4F;
+  color: white;
+}

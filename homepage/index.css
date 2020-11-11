@@ -1,0 +1,21 @@
+/* homepage */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron {
+  margin: 3vh;
+
+  max-width: 50vw;
+  min-width: 40rem;
+  min-height: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: auto;
+
+}

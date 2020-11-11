@@ -1,0 +1,46 @@
+/* CSS File for About Me page */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron {
+  margin: 3vh;
+
+  max-width: 50vw;
+  min-width: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: auto;
+
+}
+
+img {
+  margin-bottom: 2vh;
+  object-fit: scale-down;
+}
+
+.first-line {
+  font-weight: bold;
+}
+
+.lead {
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 3vh;
+
+  text-align: left;
+  font-weight: bold;
+}
+
+p {
+  margin-top: 1vh;
+  text-align: left;
+  padding-left: 2vw;
+}

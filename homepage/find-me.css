@@ -1,0 +1,34 @@
+/* CSS file for Find Me page */
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  margin: 2vh 1vw 0 1vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  padding: 1vh 2vh 1vh 2vh;
+  width: clamp(45rem, 95vw, 95vw);
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 2vw;
+}
+
+.card-title {
+ grid-column-start:  1;
+}
+
+.card-text {
+    grid-column-end: span 6;
+}
+
+.btn-primary {
+  grid-column-start: 8;
+  font-weight: bold;
+}

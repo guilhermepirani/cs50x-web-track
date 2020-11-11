@@ -1,0 +1,30 @@
+/* CSS file for Portfolio page */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 3vh;
+  min-width: 30vh;
+  min-height: 50vh;
+  max-width: 30vh;
+  max-height: 50vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+
+.card-img-top {
+    max-height: 180px;
+    overflow: hidden;
+    object-fit: scale-down;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1vh;
+}
