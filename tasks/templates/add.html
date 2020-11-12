@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for("static", filename="add.css") }}">
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <input id="task" name="task" type="text" placeholder="Type task">
+        <input id="submit" type="submit" disabled>
+    </form>
+
+    <script src= {{ url_for('static', filename='validate.js') }}></script>
+{% endblock %}

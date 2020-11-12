@@ -1,0 +1,28 @@
+<! DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for("static", filename="layout.css") }}">
+        {% block styles %}
+        {% endblock %}
+    </head>
+    <body>
+      <div id="page">
+        <aside class="animate-right">
+          <header>
+            <h1 id="side-title">Tasks</h1>
+          </header>
+          <div id="menu">
+            <a class="sidebar-button" href="/add">New Task</a>
+          </div>
+        </aside>
+
+        <main>
+        {% block main %}
+        {% endblock %}
+        </main>
+      </div>
+    </body>
+</html>
