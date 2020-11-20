@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+    <button class="btn btn-primary" onclick="DarkMode()">Toggle dark mode</button>
+
+    <script>function DarkMode() {
+        let mode = localStorage.getItem('mode');
+
+        if (mode === 'dark') {
+            localStorage.setItem('mode', 'light');
+        } else {
+            localStorage.setItem('mode', 'dark');
+        }
+
+        location.reload();
+    }
+    </script>
+
+    <hr>
+
+    <form action="/add-cash" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" min="1" name="add-cash" placeholder="Cash to add" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+
+    <hr>
+
+    <form action="/withdraw" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" min="1" name="withdraw" placeholder="Cash to withdraw" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Withdraw</button>
+    </form>
+
+    <hr>
+
+    <form action="/change-password" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="old-password" placeholder="Old Password" type="password">
+        </div>
+         <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password - 6 or longer -" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+
+{% endblock %}

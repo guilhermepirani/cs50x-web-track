@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Get Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Enter Stock Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get Quote</button>
+    </form>
+    <hr>
+    <div class="text-left">
+        <h3 class="text-center">Tips</h3>
+        <p>Enter the desired stock symbol in the. Example: TSLA (for Tesla stocks)</p>
+        <p>Some popular stocks are:</p>
+        <ul>
+            <li>Apple: AAPL</li>
+            <li>Amazon: AMZN</li>
+            <li>Netflix: NFLX</li>
+            <li>Microsoft: MSFT</li>
+            <li>Facebook: FB</li>
+            <li>Nvidia: NVDA</li>
+            <li>Google: GOOG</li>
+            <li>Tesla: TSLA</li>
+        </ul>
+        <p>For a list of all avaible stocks check:
+            <a class="font-weight-bold" href="https://www.nasdaq.com/market-activity/stocks/screener" target="_blank">NASDAQ Stock Screener</a>
+        </p>
+        <p>Don't worry about your typing, the input is case insensitive!</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Enter Stock Symbol" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" min="1" name="shares" placeholder="Quantity of Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy</button>
+    </form>
+        <hr>
+    <div class="text-left">
+        <h3 class="text-center">Tips</h3>
+        <p>Enter the desired stock symbol in the first box. Example: TSLA (for Tesla stocks)</p>
+        <p>Enter how many shares of that stock you want to buy on the second box.</p>
+        <p>Some popular stocks are:</p>
+        <ul>
+            <li>Apple: AAPL</li>
+            <li>Amazon: AMZN</li>
+            <li>Netflix: NFLX</li>
+            <li>Microsoft: MSFT</li>
+            <li>Facebook: FB</li>
+            <li>Nvidia: NVDA</li>
+            <li>Google: GOOG</li>
+            <li>Tesla: TSLA</li>
+        </ul>
+        <p>For a list of all avaible stocks check:
+            <a class="font-weight-bold" href="https://www.nasdaq.com/market-activity/stocks/screener" target="_blank">NASDAQ Stock Screener</a>
+        </p>
+        <p>Make sure you have checked your avaible cash and the stock's price!</p>
+    </div>
+{% endblock %}

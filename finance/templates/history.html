@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for trade in transactions %}
+                <tr class="w3-hover-red">
+                    <td>{{ trade.stock }}</td>
+                    <td>{{ trade.shares }}</td>
+                    <td>{{ trade.price }}</td>
+                    <td>{{ trade.transacted }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

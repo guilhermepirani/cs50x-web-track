@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td style="font-weight: bold">{{ holdings }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for stock in stocks %}
+                <tr class="w3-hover-blue">
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.name }}</td>
+                    <td>{{ stock.shares }}</td>
+                    <td>{{ stock.price }}</td>
+                    <td>{{ stock.total }}</td>
+                </tr>
+            {% endfor %}
+                <h1>Stocks Portfolio</h1>
+            <tr class="w3-hover-green">
+                <td colspan="4">CASH</td>
+                <td>{{ cash }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-left">
+        <h3 class="text-center">How to use</h3>
+        <p>C$50 Finance is a simple way to evaluate your stock trading performance in a safe environment. Here you can:</p>
+        <ul>
+            <li>Check a stock price via QUOTE</li>
+            <li>Buy real stocks with BUY</li>
+            <li>Sell for profit on SELL</li>
+            <li>Take a look at you trading HISTORY</li>
+            <li>Keep track of your own stock portfolio!</li>
+        </ul>
+        <p>For a list of all avaible stocks check:
+            <a class="font-weight-bold" href="https://www.nasdaq.com/market-activity/stocks/screener" target="_blank">NASDAQ Stock Screener</a>
+        </p>
+        <p>If anytime you need more cash or would like to simulate a withdrawal you can do it through your account settings!</p>
+    </div>
+{% endblock %}

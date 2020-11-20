@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+<form action="/sell" method="post">
+        <div class="form-group">
+            <select class="form-control" name="symbol">
+                <option disabled="" selected="" value="">Symbol</option>
+                    {% for stock in stocks %}
+                        <option value={{stock.stock}}>{{ stock.stock }}</option>
+                    {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" min="1" name="shares" placeholder="Quantity of Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+            <hr>
+    <div class="text-left">
+        <h3 class="text-center">Tips</h3>
+        <p>The dropdown box only shows stocks you own at least 1 share of.</p>
+        <p>Enter how many shares you want to sell in the second box. Make sure you have enough!</p>
+    </div>
+{% endblock %}
